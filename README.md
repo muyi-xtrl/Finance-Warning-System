@@ -123,6 +123,13 @@ npm run dev
 *访问 `http://localhost:5173`，使用 `admin` / `123456` 登录。*
 
 ---
+<img width="2874" height="1266" alt="屏幕截图 2026-11-07 171119" src="https://github.com/user-attachments/assets/b936962a-5e77-49d3-9cf8-0969f87284b3" />
+
+<img width="2880" height="1274" alt="屏幕截图 2026-11-07 171109" src="https://github.com/user-attachments/assets/3a29b892-114a-4885-8098-69ff9894ec12" />
+<img width="2878" height="1460" alt="屏幕截图 2026-11-07 171100" src="https://github.com/user-attachments/assets/0ee745fd-6354-42d2-9226-a3deb1687bfa" />
+<img width="2880" height="1412" alt="屏幕截图 2026-11-07 171055" src="https://github.com/user-attachments/assets/baa86a83-f758-4873-9100-bf9e9dfd234b" />
+
+<img width="2880" height="1454" alt="屏幕截图 2026-11-07 171040" src="https://github.com/user-attachments/assets/8b24ab60-bb43-4106-96d6-6c81e0ca4910" />
 
 
 
