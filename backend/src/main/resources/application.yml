@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: finance-warning
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/finance_warning?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+# ⚠️ 前缀要和 pom 里的依赖一致：用 mybatis-plus 就是 mybatis-plus，用 mybatis 就是 mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+hadoop:
+  fs-default-fs: hdfs://hadoop100:8020
+  yarn-rm: hadoop101:8032
+  user-name: root
+  mr-jar: /opt/finance/hadoop-job/finance-warning-mr.jar
+  mr-main: com.finance.warning.mr.RiskWarningJob
+  raw-path: /finance/raw
+  result-path: /finance/result
+  # 先 true，跑通本地/DB 后再改 false
+  mock-enabled: true
+
+jwt:
+  secret: FinanceWarningPlatformSecretKey2024
+  expire-hours: 24
+
+logging:
+  level:
+    com.finance.warning: info
+    org.apache.hadoop: warn
